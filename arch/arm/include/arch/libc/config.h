@@ -1,0 +1,11 @@
+#ifndef _ARCH_LIBC_CONFIG_H
+#define _ARCH_LIBC_CONFIG_H
+
+#define CONFIG_UID16
+
+#define HAVE_ARCH_STRLEN
+#define HAVE_ARCH_STRCHR
+#define HAVE_ARCH_STRCMP
+#define HAVE_ARCH_MEMCMP
+
+#endif
