@@ -1,0 +1,76 @@
+_sysctl
+alloc_hugepages
+create_module
+delete_module
+free_hugepages
+get_kernel_syms
+get_thread_area
+io_cancel
+io_destroy
+io_getevents
+io_setup
+io_submit
+lookup_dcookie
+modify_ldt
+nfsservctl
+personality
+pivot_root
+query_module
+quotactl
+readahead
+remap_file_pages
+rt_sigqueueinfo
+set_thread_area
+sysfs
+
+#
+afs_syscall		// removed
+break			// removed
+ftime			// removed
+getpmsg			// STREAMS
+gtty			// removed
+idle			// removed
+lock			// removed
+mpx			// removed
+oldgetrlimit		// obsolete
+oldfstat		// obsolete?
+oldlstat		// obsolete?
+oldolduname		// obsolete
+oldstat			// obsolete
+olduname		// obsolete
+prof			// removed
+profil			// removed
+putpmsg			// STREAMS
+readdir			// obsoleted by getdents
+security		// security modules
+sigreturn		// must never be used ???
+sgetmask		// obsoleted by sigprocmask
+ssetmask		// obsoleted by sigprocmask
+stty			// removed
+ulimit			// removed
+uselib			// for a.out only ?
+vm86old			// obsolete
+#
+getegid32
+geteuid32
+getgid32
+getgroups32
+getresgid32
+getresuid32
+getuid32
+setfsgid32
+setfsuid32
+setgid32
+setgroups32
+setregid32
+setresgid32
+setresuid32
+setreuid32
+setuid32
+#
+fstat64
+ftruncate64
+getdents64
+lstat64
+stat64
+truncate64

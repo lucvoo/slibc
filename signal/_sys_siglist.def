@@ -1,0 +1,52 @@
+// Signal description
+
+DEF(ABRT,	"Abornormal termination")
+DEF(ALRM,	"Alarm timer expired")
+DEF(BUS,	"Bus error")
+DEF(CHLD,	"Change in status of child")
+DEF(CONT,	"Continue stopped process")
+DEF(FPE,	"Erroneous arithmetic operation")
+DEF(HUP,	"Hangup")
+DEF(ILL,	"Illegal instruction")
+DEF(INT,	"Terminal interrupt")
+DEF(IO,		"I/O possible")
+DEF(KILL,	"Kill")
+DEF(PIPE,	"Broken pipe")
+DEF(PROF,	"Profiling timer expired")
+DEF(QUIT,	"Terminal quit")
+DEF(SEGV,	"Segmentation fault")
+DEF(STOP,	"Stop execution")
+DEF(SYS,	"Invalid system call")
+DEF(TERM,	"Termination")
+DEF(TRAP,	"Trace/breakpoint trap")
+DEF(TSTP,	"Terminal stop")
+DEF(TTIN,	"Background read from tty")
+DEF(TTOU,	"Background write to tty")
+DEF(URG,	"Urgent I/O condition")
+DEF(USR1,	"User defined signal 1")
+DEF(USR2,	"User defined signal 2")
+DEF(VTALRM,	"Virtual timer expired")
+DEF(WINCH,	"Terninal window changed")
+DEF(XCPU,	"CPU time limit exceeded")
+DEF(XFSZ,	"File size limit exceeded")
+
+// these ones are not always present
+#ifdef SIGSTKFLT
+DEF(STKFLT,	"Stack fault")
+#endif
+
+#ifdef SIGLOST			// sparc & sparc64
+DEF(LOST,	"Resource lost")
+#endif
+
+#ifdef SIGEMT			// alpha, mips, mips64, parisc
+DEF(LOST,	"EMT hardware fault")
+#endif
+
+#ifdef SIGINFO
+DEF(INFO,	"Information request")
+#endif
+
+#if defined(SIGPWR) && (SIGPWR != SIGLOST)
+DEF(PWR,	"Power failure")
+#endif

@@ -1,0 +1,57 @@
+- FIX problem of kernel/user space for types msgid_ds/semid_ds/shmid_ds
+- complete mktime()
+- FIX a alignment bug in db-files when assign a char* to a char**
+
+- unified syscall, maybe with specific _syscall_1,2,3,4,5,6
+    - OK for ARM
+    - TODO for i386
+
+
+clone
+cuserid
+fcloseall
+fgetpos & fsetpos
+fnmatch
+scanf fscanf sscanf vscanf vfscanf vsscanf
+fseeko
+ftell
+ftello
+getaddrinfo & C°
+getcontext swapcontext setcontext makecontext
+getdate
+gets
+getspent & C°
+getutent & C°
+getutxent & C°
+hasmntopt
+hcreate, hdestroy, hsearch
+inet_ntop
+inet_pton
+initstate & setstate
+lockf
+lseek64
+malloc & C° real ones!!!
+memmem
+mempcpy ???
+memrchr
+pathconf
+putpwent
+random
+setkey
+sigqueue
+sigstack
+srandom
+strndup
+strptime
+sysconf
+tdelete, tfind, tsearch, twalk, tdestroy
+tempnam
+tmpnam & tmpnam_r
+tzset
+ungetc
+waitid
+
+
+<search.h>
+
+* see how we can try to use/reuse getcycles() ???

@@ -1,0 +1,4 @@
+#include <sys/vm86.h>
+#include "libc/syscall.h"
+
+syscall1(int,vm86,	struct vm86_struct*)

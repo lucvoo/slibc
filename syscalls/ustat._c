@@ -1,0 +1,6 @@
+#include <unistd.h>
+#include "libc/syscall.h"
+
+syscall2(int,ustat,	dev_t, struct ustat*)
+
+warn_obsolete(ustat, "[f]statvfs")

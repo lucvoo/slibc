@@ -1,0 +1,25 @@
+#!/bin/sh
+
+cd $1
+lst=""
+
+echo "MKHEADER := \$(ROOT)/tools/mkheader"
+echo "HDEP ="
+echo
+
+for f in $(find -name '*.h.in')
+do
+	i=${f#./}
+	dest="\$(ROOT)/include/${i%.in}"
+	srcd="\$(ROOT)/include_src"
+	srch="$srcd/$i"
+
+	echo "$dest: $srch"
+	echo "HDEP += $dest"
+	echo
+done
+
+echo
+echo "\$(ROOT)/include/%.h: \$(ROOT)/include_src/%.h.in"
+echo "	\$(MKHEADER) \$(ROOT)/include_src \$*.h.in \$@"
+echo
