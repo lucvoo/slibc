@@ -1,0 +1,21 @@
+include Makefile.cfg
+
+.PHONY: __libs
+__libs:
+
+include $(subdir)Makefile
+
+makes := $(DIRS:%=%.make)
+
+libs :=
+libs += $(LIBNAME).a
+
+objs :=
+
+-include $(makes)
+
+
+__build: $(objs) $(libs)
+
+####
+include Makefile.rules

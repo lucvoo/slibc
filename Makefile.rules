@@ -1,0 +1,35 @@
+####
+
+%.o: %.c
+	@echo "  CC	$@"	$(OUT)
+	$(Q)$(CC) -Wp,-MD,$(@D)/.$(@F).d $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
+%.o: %.S
+	@echo "  CC	$@"	$(OUT)
+	$(Q)$(CC) -Wp,-MD,$(@D)/.$(@F).d $(ASFLAGS) $(CPPFLAGS) -c $< -o $@
+
+%.s: %.c FORCE
+	$(CC) $(CFLAGS) $(CPPFLAGS) -S $< -o $@
+%.s: %.S FORCE
+	$(CC) $(ASFLAGS) $(CPPFLAGS) -S $< -o $@
+%.i: %.c FORCE
+	$(CC) $(CFLAGS) $(CPPFLAGS) -E -dD $< -o $@
+
+####
+
+%.a: $(objs)
+	@echo "  AR	$@"	$(OUT)
+	$(Q)$(AR) crs $@ $^
+
+####
+
+%/.make: %/Makefile
+	@echo "  GEN	$@"	$(OUT)
+	$(Q)echo 'include $<'				>  $@
+	$(Q)echo 'ifneq ($$(SRC),)'			>> $@
+	$(Q)echo 'objs += $$(SRC:%=$*/%.o)'		>> $@
+	$(Q)echo 'endif'				>> $@
+
+####
+.PHONE: FORCE
+FORCE:

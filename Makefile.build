@@ -1,0 +1,16 @@
+include Makefile.cfg
+
+.PHONY: __build
+__build:
+
+
+deps :=
+deps += $(objs:%=.%.d)
+
+####
+
+ifeq ($(MAKECMDGOALS),__build)
+ifneq ($(deps),)
+-include $(deps)
+endif
+endif
