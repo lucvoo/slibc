@@ -1,0 +1,20 @@
+struct stat {
+	unsigne		st_dev;
+	ino_t		st_ino;
+	mode_t		st_mode;
+	nlink_t		st_nlink;
+	uid_t		st_uid;
+	gid_t		st_gid;
+	unsigned	st_rdev;
+	off_t		st_size;
+	unsigned long	st_blksize;
+	unsigned long	st_blocks;
+	unsigned long	st_atime;
+	unsigned long	st_atime_nsec;
+	unsigned long	st_mtime;
+	unsigned long	st_mtime_nsec;
+	unsigned long	st_ctime;
+	unsigned long	st_ctime_nsec;
+	unsigned long	__unused4;
+	unsigned long	__unused5;
+};

@@ -1,0 +1,12 @@
+#ifndef _ARCH_ENDIAN_H
+#define _ARCH_ENDIAN_H
+
+#define __LITTLE_ENDIAN	1234
+#define __BIG_ENDIAN	4321
+
+#define __BYTE_ORDER		__LITTLE_ENDIAN
+#define __FLOAT_WORD_ORDER	__LITTLE_ENDIAN
+
+#define __LONG_LONG_PAIR(HI, LO) LO, HI
+
+#endif

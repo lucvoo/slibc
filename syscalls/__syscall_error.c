@@ -6,7 +6,11 @@ __attribute__ ((regparm(1)))
 #endif
 	 int __syscall_error(int rc)
 {
+#if defined(__powerpc__)
+	errno = rc;
+#else
 	errno = -rc;
+#endif
 
 	return -1;
 }
