@@ -2,6 +2,7 @@ SRC = 	\
 	__strerror	\
 	bcopy		\
 	bzero		\
+	ffs		\
 	memccpy		\
 	memchr		\
 	memcmp		\

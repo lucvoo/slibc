@@ -18,6 +18,7 @@ PGMS =	\
 	elf_aux		\
 	end_brk		\
 	execve		\
+	ffs		\
 	fork		\
 	ftw		\
 	getcwd		\
