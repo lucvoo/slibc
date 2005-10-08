@@ -13,6 +13,7 @@ SRC = 	\
 	exit		\
 	getenv		\
 	getopt		\
+	getpt		\
 	getsubopt	\
 	grantpt		\
 	l64a		\
