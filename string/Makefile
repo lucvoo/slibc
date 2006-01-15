@@ -18,6 +18,7 @@ SRC = 	\
 	strcoll		\
 	strcpy		\
 	strdup		\
+	strndup		\
 	strerror	\
 	strerror_r	\
 	strlen		\
