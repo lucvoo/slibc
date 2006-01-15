@@ -48,6 +48,7 @@ size_t strlcpy(char *dst, const char *src, size_t size);
 
 // ? stuff
 char *stpcpy(char *dest, const char *src);
+char *stpncpy(char* dest, const char* src, size_t size);
 #endif
 
 #endif

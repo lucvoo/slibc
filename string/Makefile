@@ -10,6 +10,7 @@ SRC = 	\
 	memmove		\
 	memset		\
 	stpcpy		\
+	stpncpy		\
 	strcasecmp	\
 	strcat		\
 	strchr		\
