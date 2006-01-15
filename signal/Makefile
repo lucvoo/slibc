@@ -1,6 +1,7 @@
 SRC = 	\
 	_sys_siglist	\
 	bsd_signal	\
+	psignal		\
 	sigaddset	\
 	sigdelset	\
 	sigemptyset	\
