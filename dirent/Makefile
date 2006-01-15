@@ -1,6 +1,7 @@
 SRC = 	\
 	alphasort	\
 	closedir	\
+	dirfd		\
 	opendir		\
 	readdir		\
 	rewinddir	\
