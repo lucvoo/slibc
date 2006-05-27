@@ -3,6 +3,7 @@ SRC = 	\
 	bcopy		\
 	bzero		\
 	ffs		\
+	ffsll		\
 	memccpy		\
 	memchr		\
 	memcmp		\

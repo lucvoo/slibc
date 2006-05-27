@@ -1,12 +1,11 @@
-#include <strings.h>
 #include <string.h>
 #include <limits.h>
 
-int ffs(int i)
+int ffsll(long long i)
 {
 	int bit = 0;
-	int shift = WORD_BIT / 2;
-	unsigned int mask = UINT_MAX >> shift;
+	int shift = __LLONG_BIT / 2;
+	unsigned long long mask = ULLONG_MAX >> shift;
 
 	if (!i)
 		return 0;
@@ -24,7 +23,7 @@ int ffs(int i)
 	return bit + 1;
 }
 
-#if     LONG_BIT == WORD_BIT
+#if     __LLONG_BIT == WORD_BIT
 #include "libc/symbols.h"
-int ffsl(long) __alias(ffs);
+int ffsl(long) __alias(ffsll);
 #endif

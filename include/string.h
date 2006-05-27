@@ -50,6 +50,9 @@ size_t strlcpy(char *dst, const char *src, size_t size);
 char *stpcpy(char *dest, const char *src);
 char *stpncpy(char* dest, const char* src, size_t size);
 char *strndup(const char* str, size_t size);
+int ffs(int i) __CONST;
+int ffsl(long i) __CONST;
+int ffsll(long long i) __CONST;
 #endif
 
 #endif
