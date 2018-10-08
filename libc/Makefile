@@ -6,13 +6,13 @@ DIRS := \
 	dirent/		\
 	ipc/		\
 	locale/		\
+	malloc/		\
 	net/		\
 	posix-misc/	\
 	signal/		\
 	stdio/		\
 	stdlib/		\
 	string/		\
-	stupid_malloc/	\
 	syscalls/	\
 	termios/	\
 	time/		\
